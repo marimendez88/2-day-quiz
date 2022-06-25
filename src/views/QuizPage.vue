@@ -10,16 +10,17 @@
     </ion-header>
     
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <section  id="full-page">
+      <!-- <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
+          <ion-title size="large">Todays Quiz</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header> -->
     
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <strong class="capitalize">Todays Quiz</strong>
       </div>
+      </section>
     </ion-content>
   </ion-page>
 </template>
@@ -43,6 +44,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+#full-page{
+  background-color: #250025;
+  background-image: url('../assets/endless-constellation.svg');
+  height: 100vh;
+  width: 100vw;
+}
 #container {
   text-align: center;
   position: absolute;
