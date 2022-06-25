@@ -5,20 +5,15 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>2DayQuiz</ion-title>
       </ion-toolbar>
     </ion-header>
     
     <ion-content :fullscreen="true">
     <section  id="full-page">
-      <!-- <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Todays Quiz</ion-title>
-        </ion-toolbar>
-      </ion-header> -->
-    
+
       <div id="container">
-        <strong class="capitalize">Todays Quiz</strong>
+        <CustomCard />
       </div>
       </section>
     </ion-content>
@@ -28,7 +23,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-
+import CustomCard from '../components/card/Card.vue'
 export default defineComponent({
   name: 'FolderPage',
   components: {
@@ -38,7 +33,8 @@ export default defineComponent({
     IonMenuButton,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    CustomCard
   }
 });
 </script>
